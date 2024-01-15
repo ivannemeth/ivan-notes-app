@@ -2,9 +2,13 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <>
-      <Link href="/">YourNotes</Link>
-      <Link href="/add-note">Add a note</Link>
-    </>
+    <nav className="navbar">
+      <Link className="navbar-homelink" href="/">
+        Your notes
+      </Link>
+      <Link className="navbar-addlink" href="/addNote">
+        Add a note
+      </Link>
+    </nav>
   );
 }

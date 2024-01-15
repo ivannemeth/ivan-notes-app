@@ -3,3 +3,28 @@
   padding: 0;
   margin: 0;
 }
+
+/* navigation */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: blueviolet;
+  padding: 25px 25px 25px 25px;
+}
+
+.navbar-homelink {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.navbar-addlink {
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 3px;
+  color: black;
+}
