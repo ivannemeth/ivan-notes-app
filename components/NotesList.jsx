@@ -12,7 +12,7 @@ export default function ProductList() {
         </div>
         <div>
           <DeleteButton />
-          <Link href="/editNote/ID">EditNoteLink</Link>
+          <Link href="/edit-note/ID">EditNote</Link>
         </div>
       </div>
     </>

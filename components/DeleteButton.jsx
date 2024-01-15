@@ -1,3 +1,3 @@
 export default function DeleteButton() {
-  return <div>Delete button</div>;
+  return <button>Delete Note</button>;
 }
