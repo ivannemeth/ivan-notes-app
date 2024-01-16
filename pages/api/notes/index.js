@@ -11,17 +11,14 @@ export default async function handler(request, response) {
       await note.save();
       return response.status(201).json({ status: "Note created." });
     } catch (error) {
-      console.error(error);
+      console.error("error", error);
       return response.status(400).json({ error: error.message });
     }
-  }
-
-  if (request.method === "GET") {
+  } else if (request.method === "GET") {
     const notes = await Note.find();
+    console.log("notes", notes);
     return response.status(200).json(notes);
-  }
-
-  if (request.method === "DELETE") {
+  } else if (request.method === "DELETE") {
     await Note.findByIdAndDelete(id);
 
     response.status(200).json({ status: `Note successfully deleted.` });

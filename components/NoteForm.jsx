@@ -1,6 +1,8 @@
 import useSWR from "swr";
+import { useRouter } from "next/router";
 
 export default function NoteForm() {
+  const router = useRouter();
   const { mutate } = useSWR("/api/notes");
 
   async function handleSubmit(event) {
@@ -23,7 +25,7 @@ export default function NoteForm() {
     }
 
     mutate();
-    event.target.reset();
+    router.push("/");
   }
   return (
     <form onSubmit={handleSubmit}>
