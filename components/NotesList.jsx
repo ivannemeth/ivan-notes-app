@@ -23,7 +23,7 @@ export default function NotesList() {
 
           <div>
             <DeleteButton id={note._id} />
-            <Link href="/api/notes/ABC"></Link>
+            <Link href={`/${note._id}`}>Edit Note</Link>
           </div>
         </div>
       ))}
