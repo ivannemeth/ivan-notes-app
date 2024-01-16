@@ -12,7 +12,7 @@ export default function AddNotePage() {
         rows="10"
         placeholder="Write your note here"
       ></textarea>
-      <button>Add Note</button>
+      <button>Submit</button>
     </form>
   );
 }
