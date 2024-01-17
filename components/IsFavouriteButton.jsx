@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { MdFavorite } from "react-icons/md";
-import { MdFavoriteBorder } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
+import styles from "../styles/Home.module.css";
 
 function IsFavouriteButton() {
   const [isFavourite, setIsFavourite] = useState(false);
@@ -11,12 +12,8 @@ function IsFavouriteButton() {
   };
 
   return (
-    <button onClick={handleClick}>
-      {isFavourite ? (
-        <MdFavorite size="25px"></MdFavorite>
-      ) : (
-        <MdFavoriteBorder size="25px"></MdFavoriteBorder>
-      )}
+    <button onClick={handleClick} className={styles.IsFavouriteButton}>
+      {isFavourite ? <FaStar /> : <FaRegStar />}
     </button>
   );
 }
