@@ -40,7 +40,7 @@ export default function NoteForm() {
         rows="10"
         placeholder="Write your note here"
       ></textarea>
-      <button>Submit</button>
+      <button>Add</button>
     </form>
   );
 }

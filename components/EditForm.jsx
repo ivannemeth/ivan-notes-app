@@ -46,7 +46,7 @@ export default function EditForm() {
         placeholder="Write your note here"
         defaultValue={data?.description}
       ></textarea>
-      <button>Submit</button>
+      <button>Save</button>
     </form>
   );
 }

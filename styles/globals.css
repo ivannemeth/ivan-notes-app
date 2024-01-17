@@ -10,15 +10,16 @@
   display: flex;
   justify-content: space-between;
   justify-items: center;
-  background-color: blueviolet;
+  background-color: #f695c5;
   padding: 25px 25px 25px 25px;
 }
 
 .navbar-homelink {
-  color: white;
   text-decoration: none;
   cursor: pointer;
   padding: 3px;
+  font-weight: bold;
+  color: black;
 }
 
 .navbar-addlink {
@@ -27,4 +28,14 @@
   cursor: pointer;
   padding: 3px;
   color: black;
+}
+
+/*note */
+
+.note {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
