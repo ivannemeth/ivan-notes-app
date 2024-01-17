@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function EditForm() {
   const router = useRouter();
   const { id } = router.query;
-  console.log("id", id);
+  /*console.log("id", id);*/
   const { data, isLoading, mutate } = useSWR(`/api/notes/${id}`);
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -12,7 +12,7 @@ export default function EditForm() {
   if (!data) {
     return;
   }
-  console.log("data", data);
+  /*console.log("data", data);*/
 
   async function handleEdit(event) {
     event.preventDefault();

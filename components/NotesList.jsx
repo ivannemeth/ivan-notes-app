@@ -4,7 +4,7 @@ import DeleteButton from "./DeleteButton";
 
 export default function NotesList() {
   const { data, isLoading } = useSWR("/api/notes");
-  console.log("data from client", data);
+  /*console.log("data from client", data);*/
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -22,7 +22,7 @@ export default function NotesList() {
           </div>
 
           <div>
-            <DeleteButton id={note._id} />
+            <DeleteButton />
             <Link href={`/${note._id}`}>Edit Note</Link>
           </div>
         </div>

@@ -6,11 +6,11 @@ export default async function handler(request, response) {
   const { id } = request.query;
   if (!id) return;
 
-  console.log("id server", id);
+  /*console.log("id server", id);*/
 
   if (request.method === "GET") {
     const note = await Note.findById(id);
-    console.log("note", note);
+    /*console.log("note", note);*/
     return response.status(200).json(note);
   }
 
