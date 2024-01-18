@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 export default function DeleteButton({ id, mutate }) {
-  console.log("id", id);
+  /*console.log("id", id);*/
 
   async function handleDelete() {
     const confirmed = confirm("Are you sure?");
