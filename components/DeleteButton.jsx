@@ -1,5 +1,3 @@
-import { useRouter } from "next/router";
-
 export default function DeleteButton({ id, mutate }) {
   /*console.log("id", id);*/
 
