@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import styles from "../styles/Home.module.css";
 
 export default function NoteForm({ setShowNotes }) {
   const { mutate } = useSWR("/api/notes");
@@ -38,6 +39,21 @@ export default function NoteForm({ setShowNotes }) {
         rows="10"
         placeholder="Write your note here"
       ></textarea>
+      <label for="yellowRadioButton" className={styles.selectColorButton}>
+        Yellow
+      </label>
+      <input
+        type="radio"
+        id="yellowRadioButton"
+        name="color"
+        value="yellow"
+        checked
+      />
+
+      <label for="pinkRadioButton" className={styles.selectColorButton}>
+        Pink
+      </label>
+      <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
       <button>Add</button>
     </form>
   );

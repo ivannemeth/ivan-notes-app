@@ -34,17 +34,7 @@
 }
 
 .note {
-  background-color: #f695c5;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  width: 250px;
-  height: 250px;
-}
-
-.yellow {
-  background-color: yellow;
+  /*background-color: #f695c5;*/
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
@@ -57,4 +47,8 @@
   margin: 0;
   padding: 0;
   background-color: #f695c5;
+}
+
+.selectColorButton {
+  color: white;
 }

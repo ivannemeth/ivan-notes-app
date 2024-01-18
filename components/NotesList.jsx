@@ -24,7 +24,11 @@ export default function NotesList({
     <>
       <div className={styles.noteListContainer}>
         {data.map((note) => (
-          <div key={note._id} className={styles.note}>
+          <div
+            key={note._id}
+            className={styles.note}
+            style={{ backgroundColor: note.color }}
+          >
             <div>
               <h3>{note.title}</h3>
               <p>{note.description}</p>
