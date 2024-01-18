@@ -1,8 +1,7 @@
 import { useRouter } from "next/router";
 
-export default function DeleteButton() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function DeleteButton({ id, mutate }) {
+  console.log("id", id);
 
   async function handleDelete() {
     const confirmed = confirm("Are you sure?");
@@ -14,8 +13,11 @@ export default function DeleteButton() {
         });
 
         if (response.ok) {
-          alert("Note deleted successfully.");
-          router.replace("/");
+          mutate();
+          setTimeout(() => {
+            alert("Note deleted successfully.");
+          }, 500);
+          //router.replace("/");*/
         } else {
           alert("Failed to delete the note.");
         }

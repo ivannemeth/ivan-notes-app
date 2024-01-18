@@ -23,6 +23,7 @@ export default async function handler(request, response) {
   }
 
   if (request.method === "DELETE") {
+    console.log("server id", id);
     await Note.findByIdAndDelete(id);
 
     response.status(200).json({ status: `Note successfully deleted.` });

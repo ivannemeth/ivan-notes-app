@@ -6,7 +6,7 @@ import IsFavouriteButton from "./IsFavouriteButton";
 import styles from "../styles/Home.module.css";
 
 export default function NotesList() {
-  const { data, isLoading } = useSWR("/api/notes");
+  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -26,7 +26,7 @@ export default function NotesList() {
             </div>
 
             <div>
-              <DeleteButton />
+              <DeleteButton id={note._id} mutate={mutate} />
               <Link href={`/${note._id}`}>
                 <FaEdit size="25px" color="black"></FaEdit>
               </Link>
