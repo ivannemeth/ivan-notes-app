@@ -11,7 +11,6 @@ export default function Home() {
   const [showNotes, setShowNotes] = useState(false);
   const [showEditNotes, setShowEditNotes] = useState(false);
   const [noteToEdit, setNoteToEdit] = useState(null);
-  const [noteColor, setNoteColor] = useState("");
 
   /* console.log("showEditNotes", showEditNotes);*/
 
@@ -24,13 +23,12 @@ export default function Home() {
 
   return (
     <>
-      <Navigation setShowNotes={setShowNotes} setNoteColor={setNoteColor} />
+      <Navigation setShowNotes={setShowNotes} />
       <NotesList
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
         data={data}
         mutate={mutate}
-        noteColor={noteColor}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
