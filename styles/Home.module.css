@@ -34,7 +34,17 @@
 }
 
 .note {
-  background-color: #f695c5;
+  /*background-color: #f695c5;*/
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+
+.yellow {
+  background-color: yellow;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;

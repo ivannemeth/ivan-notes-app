@@ -10,7 +10,9 @@ export default function NotesList({
   setNoteToEdit,
   data,
   mutate,
+  noteColor,
 }) {
+  console.log("note color:", noteColor);
   //  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
   /*  if (isLoading) {
@@ -24,7 +26,11 @@ export default function NotesList({
     <>
       <div className={styles.noteListContainer}>
         {data.map((note) => (
-          <div key={note._id} className={styles.note}>
+          <div
+            key={note._id}
+            style={{ backgroundColor: noteColor }}
+            className={styles.note}
+          >
             <div>
               <h3>{note.title}</h3>
               <p>{note.description}</p>
