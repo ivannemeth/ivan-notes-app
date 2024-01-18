@@ -1,11 +1,10 @@
 import useSWR from "swr";
-import { useRouter } from "next/router";
 
-export default function EditForm() {
-  const router = useRouter();
+export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
+  /* const router = useRouter();
   const { id } = router.query;
-  /*console.log("id", id);*/
-  const { data, isLoading, mutate } = useSWR(`/api/notes/${id}`);
+console.log("id", id);*/
+  const { data, isLoading } = useSWR(`/api/notes/${noteToEdit}`);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -19,7 +18,7 @@ export default function EditForm() {
     const formData = new FormData(event.target);
     const noteData = Object.fromEntries(formData);
 
-    const response = await fetch(`/api/notes/${id}`, {
+    const response = await fetch(`/api/notes/${noteToEdit}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +28,8 @@ export default function EditForm() {
 
     if (response.ok) {
       mutate();
-      router.push("/");
+      setShowEditNotes(false);
+      /*router.push("/") */
     }
   }
 

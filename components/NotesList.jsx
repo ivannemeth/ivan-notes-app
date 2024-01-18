@@ -5,15 +5,20 @@ import { FaEdit } from "react-icons/fa";
 import IsFavouriteButton from "./IsFavouriteButton";
 import styles from "../styles/Home.module.css";
 
-export default function NotesList() {
-  const { data, isLoading, mutate } = useSWR("/api/notes");
+export default function NotesList({
+  setShowEditNotes,
+  setNoteToEdit,
+  data,
+  mutate,
+}) {
+  //  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
-  if (isLoading) {
+  /*  if (isLoading) {
     return <h1>Loading...</h1>;
   }
   if (!data) {
     return;
-  }
+  }*/
 
   return (
     <>
@@ -27,9 +32,16 @@ export default function NotesList() {
 
             <div>
               <DeleteButton id={note._id} mutate={mutate} />
-              <Link href={`/${note._id}`}>
-                <FaEdit size="25px" color="black"></FaEdit>
-              </Link>
+
+              <FaEdit
+                size="25px"
+                color="black"
+                onClick={() => {
+                  setNoteToEdit(note._id);
+                  setShowEditNotes((toggle) => !toggle);
+                }}
+              />
+
               <IsFavouriteButton />
             </div>
           </div>
@@ -38,3 +50,5 @@ export default function NotesList() {
     </>
   );
 }
+
+/*<Link href={`/${note._id}`}>*/
