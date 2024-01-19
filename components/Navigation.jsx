@@ -1,14 +1,19 @@
 import Link from "next/link";
+import { IoIosAddCircle } from "react-icons/io";
+import styles from "../styles/Home.module.css";
 
-export default function Navigation() {
+export default function Navigation({ setShowNotes }) {
   return (
-    <nav className="navbar">
-      <Link className="navbar-homelink" href="/">
-        Your notes
+    <nav className={styles.navbar}>
+      <Link className={styles.navbarHomelink} href="/">
+        <h1>StickyMe*</h1>
       </Link>
-      <Link className="navbar-addlink" href="/add-note">
-        Add a note
-      </Link>
+
+      <IoIosAddCircle
+        size="25px"
+        color="white"
+        onClick={() => setShowNotes((toggle) => !toggle)}
+      />
     </nav>
   );
 }

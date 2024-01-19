@@ -16,11 +16,7 @@ export default async function handler(request, response) {
     }
   } else if (request.method === "GET") {
     const notes = await Note.find();
-    console.log("notes", notes);
+    /*console.log("notes", notes);*/
     return response.status(200).json(notes);
-  } else if (request.method === "DELETE") {
-    await Note.findByIdAndDelete(id);
-
-    response.status(200).json({ status: `Note successfully deleted.` });
   }
 }
