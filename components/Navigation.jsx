@@ -10,7 +10,7 @@ export default function Navigation({ setShowNotes }) {
       </Link>
 
       <IoIosAddCircle
-        size="25px"
+        size="35px"
         color="white"
         onClick={() => setShowNotes((toggle) => !toggle)}
       />
