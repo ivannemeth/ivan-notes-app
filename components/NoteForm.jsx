@@ -47,6 +47,7 @@ export default function NoteForm({ setShowNotes }) {
         cols="30"
         rows="10"
         placeholder="Write your note here"
+        className={styles.inputDecription}
       ></textarea>
       <label for="yellowRadioButton" className={styles.selectColorButton}>
         Yellow

@@ -41,6 +41,8 @@
   width: 250px;
   height: 250px;
   position: relative;
+  word-wrap: break-word;
+  font-size: 1rem;
 }
 /* Buttons on the note */
 .noteButtons {
@@ -64,13 +66,13 @@
 .noteForm {
   position: absolute;
   z-index: 1;
-  top: 25%;
+  top: 10%;
   left: 35%;
   background-color: #15172b;
   border-radius: 20px;
   padding: 20px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 400px;
 }
@@ -87,6 +89,13 @@
   padding-top: 10px;
   font-family: sans-serif;
 }
+.inputDecription {
+  width: 250px;
+  height: 250px;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: 1rem;
+}
 
 .selectColorButton {
   color: white;
@@ -95,7 +104,7 @@
 .addButton {
   cursor: pointer;
   text-align: center;
-  width: 100%;
+  width: 50%;
   margin-top: 38px;
   border-radius: 12px;
   padding: 5px;
