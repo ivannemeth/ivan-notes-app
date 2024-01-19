@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import styles from "../styles/Home.module.css";
 
 export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
   /* const router = useRouter();
@@ -34,10 +35,17 @@ console.log("id", id);*/
   }
 
   return (
-    <form onSubmit={handleEdit}>
-      <label htmlFor="title">Title:</label>
+    <form onSubmit={handleEdit} className={styles.noteForm}>
+      <div class="title" className={styles.formHeader}>
+        Edit your sticky!
+      </div>
+      <label htmlFor="title" className={styles.inputLabel}>
+        Title:
+      </label>
       <input type="text" id="title" name="title" defaultValue={data?.title} />
-      <label htmlFor="description">Message:</label>
+      <label htmlFor="description" className={styles.inputLabel}>
+        Message:
+      </label>
       <textarea
         id="description"
         name="description"
@@ -46,7 +54,7 @@ console.log("id", id);*/
         placeholder="Write your note here"
         defaultValue={data?.description}
       ></textarea>
-      <button>Save</button>
+      <button className={styles.addButton}>Save</button>
     </form>
   );
 }

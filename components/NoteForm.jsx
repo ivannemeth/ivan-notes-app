@@ -1,6 +1,7 @@
 import useSWR from "swr";
 
-import styles from "../styles/Form.module.css";
+/*import styles from "../styles/Form.module.css";*/
+import styles from "../styles/Home.module.css";
 
 export default function NoteForm({ setShowNotes }) {
   const { mutate } = useSWR("/api/notes");
@@ -28,11 +29,18 @@ export default function NoteForm({ setShowNotes }) {
     setShowNotes(false);
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">Title:</label>
+    <form onSubmit={handleSubmit} className={styles.noteForm}>
+      <div class="title" className={styles.formHeader}>
+        Create a sticky!
+      </div>
+      <label htmlFor="title" className={styles.inputLabel}>
+        Title:
+      </label>
       <input type="text" id="title" name="title" placeholder="Name your note" />
 
-      <label htmlFor="description">Message:</label>
+      <label htmlFor="description" className={styles.inputLabel}>
+        Message:
+      </label>
       <textarea
         id="description"
         name="description"
@@ -55,7 +63,7 @@ export default function NoteForm({ setShowNotes }) {
         Pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <button>Add</button>
+      <button className={styles.addButton}>Add</button>
     </form>
   );
 }
