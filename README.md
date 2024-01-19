@@ -1,3 +1,94 @@
+Notes app using Next.js and MongoDB database
+
+User Story 1: List of all Notes (homepage)
+
+Value Proposition
+As a person that likes order
+I want to see a list of all added notes (default: empty)
+so that I can get an overview of all of them
+
+Acceptance Criteria
+All added notes are displayed as a list of notes
+In the Header there is a add note button
+Each note has an edit note and delete note icon
+Notes are being saved in MongoDB Database
+
+Tasks
+…
+
+User Story 2 : Add a note page or pop-up window
+
+Value Proposition
+As a person that likes order
+I want to be able to add a new note consisting of a header and the text
+so that I can be added to the list of all notes (homepage)
+
+Acceptance Criteria
+A new page opens after clicking to add a new note on the homepage
+There is a form - headline and text field
+and a submit button
+The note on the Homepage and MondoDB will be added
+
+Tasks
+…
+
+User Story 3 : Edit a note page or pop-up window
+
+Value Proposition
+As a person that likes order
+I want to be able to edit the existing note
+so that I don't have to delete and create a new one if there are changes
+
+Acceptance Criteria
+A new page opens after clicking on the edit icon inside of note on the homepage
+There is a form - headline and text field that can be edited
+and a submit button
+The note on the Homepage and MondoDB will be updated
+
+Tasks
+…
+
+User Story 4 : Delete a note
+
+Value Proposition
+As a person that likes order
+I want to be able to delete and existing note
+so that I can see only the notes that are still relevant
+
+Acceptance Criteria
+A note will be deleted after clicking on the icon inside of the note
+There is a pop-up window asking for a delete confirmation
+The note on the Homepage and MondoDB will be deleted
+
+Tasks
+…
+
+User Story 5 : Notes in different colors
+
+Value Proposition
+As a person that likes order
+I want to be able to add notes in different colors
+so that I can separate different clusters/topic/importance
+
+Acceptance Criteria
+Option 1: When adding the note (Add Note site) - there is an option to choose a color
+Option 2: There are sticky notes icons in 2/3 different colors on the homepage that lead to add a Note site with chosen color
+
+Tasks
+…
+
+Bonus: User Story 6 : Sign-up/Log-in
+
+Value Proposition
+As a person that likes order
+I want to be able to log-in
+so that I can get back to my notes
+
+Acceptance Criteria
+
+Tasks
+…
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
