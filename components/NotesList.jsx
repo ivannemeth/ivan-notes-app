@@ -1,7 +1,8 @@
 import useSWR from "swr";
 import Link from "next/link";
 import DeleteButton from "./DeleteButton";
-import { FaEdit } from "react-icons/fa";
+
+import { MdEdit } from "react-icons/md";
 import IsFavouriteButton from "./IsFavouriteButton";
 import styles from "../styles/Home.module.css";
 
@@ -34,11 +35,11 @@ export default function NotesList({
               <p>{note.description}</p>
             </div>
 
-            <div>
+            <div className={styles.noteButtons}>
               <DeleteButton id={note._id} mutate={mutate} />
 
-              <FaEdit
-                size="25px"
+              <MdEdit
+                size="18px"
                 color="black"
                 onClick={() => {
                   setNoteToEdit(note._id);

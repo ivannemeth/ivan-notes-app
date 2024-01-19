@@ -1,5 +1,6 @@
 import useSWR from "swr";
-import styles from "../styles/Home.module.css";
+
+import styles from "../styles/Form.module.css";
 
 export default function NoteForm({ setShowNotes }) {
   const { mutate } = useSWR("/api/notes");
@@ -46,7 +47,7 @@ export default function NoteForm({ setShowNotes }) {
         type="radio"
         id="yellowRadioButton"
         name="color"
-        value="yellow"
+        value="#FFFAA0"
         checked
       />
 

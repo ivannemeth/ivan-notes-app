@@ -41,14 +41,21 @@
   text-align: center;
   width: 250px;
   height: 250px;
+  position: relative;
+}
+
+.noteButtons {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .isFavouriteButton {
+  border: none;
   margin: 0;
   padding: 0;
-  background-color: #f695c5;
-}
-
-.selectColorButton {
-  color: white;
+  background-color: transparent;
+  size: "20px";
 }
