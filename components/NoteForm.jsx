@@ -56,7 +56,7 @@ export default function NoteForm({ setShowNotes }) {
         type="radio"
         id="yellowRadioButton"
         name="color"
-        value="#FFFAA0"
+        value="#FFD100"
         checked
       />
 
@@ -64,6 +64,10 @@ export default function NoteForm({ setShowNotes }) {
         Pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
+      <label for="blueRadioButton" className={styles.selectColorButton}>
+        Blue
+      </label>
+      <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
       <button className={styles.addButton}>Add</button>
     </form>
   );
