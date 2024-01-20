@@ -54,8 +54,13 @@
   position: absolute;
   top: 3px;
   right: 3px;
+
   display: flex;
   justify-content: flex-end;
+  gap: 3px;
+}
+.noteTitle {
+  padding-top: 8px;
 }
 
 .isFavouriteButton {
@@ -77,10 +82,17 @@
   border-radius: 20px;
   padding: 20px;
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   flex-direction: column;
   width: 400px;
 }
+
+.deleteButton {
+  align-self: flex-end;
+  size: 18px;
+  color: white;
+}
+
 .formHeader {
   font-family: sans-serif;
   color: #eee;
@@ -93,6 +105,7 @@
   padding-bottom: 5px;
   padding-top: 10px;
   font-family: sans-serif;
+  align-self: center;
 }
 .inputDecription {
   width: 250px;
@@ -100,10 +113,12 @@
   font-family: sans-serif;
   padding: 10px;
   font-size: 1rem;
+  align-self: center;
 }
 
 .selectColorButton {
   color: white;
+  align-self: center;
 }
 
 .addButton {
@@ -113,6 +128,7 @@
   margin-top: 38px;
   border-radius: 12px;
   padding: 5px;
+  align-self: center;
 }
 .addButton:active {
   background-color: #f695c5;

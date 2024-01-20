@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import Link from "next/link";
 import DeleteButton from "./DeleteButton";
-
+import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
 import IsFavouriteButton from "./IsFavouriteButton";
 import styles from "../styles/Home.module.css";
@@ -31,13 +31,11 @@ export default function NotesList({
             style={{ backgroundColor: note.color }}
           >
             <div>
-              <h3>{note.title}</h3>
+              <h3 className={styles.noteTitle}>{note.title}</h3>
               <p>{note.description}</p>
             </div>
 
             <div className={styles.noteButtons}>
-              <DeleteButton id={note._id} mutate={mutate} />
-
               <MdEdit
                 size="18px"
                 color="black"
@@ -47,7 +45,8 @@ export default function NotesList({
                 }}
               />
 
-              <IsFavouriteButton />
+              <ImCheckmark size="18px" />
+              <DeleteButton id={note._id} mutate={mutate} />
             </div>
           </div>
         ))}

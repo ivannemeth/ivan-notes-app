@@ -1,5 +1,5 @@
 import useSWR from "swr";
-
+import { TiDelete } from "react-icons/ti";
 /*import styles from "../styles/Form.module.css";*/
 import styles from "../styles/Home.module.css";
 
@@ -30,6 +30,11 @@ export default function NoteForm({ setShowNotes }) {
   }
   return (
     <form onSubmit={handleSubmit} className={styles.noteForm}>
+      <TiDelete
+        className={styles.deleteButton}
+        onClick={() => setShowNotes(false)}
+      />
+
       <div class="title" className={styles.formHeader}>
         Create a sticky!
       </div>
