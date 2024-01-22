@@ -4,6 +4,7 @@ import { useState } from "react";
 import useSWR from "swr";
 import NoteForm from "@/components/NoteForm";
 import EditForm from "@/components/EditForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { data, isLoading, mutate } = useSWR("/api/notes");
@@ -38,6 +39,7 @@ export default function Home() {
           mutate={mutate}
         />
       )}
+      <Footer />
     </>
   );
 }

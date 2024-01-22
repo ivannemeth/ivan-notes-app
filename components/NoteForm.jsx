@@ -1,4 +1,6 @@
 import useSWR from "swr";
+import { TiDelete } from "react-icons/ti";
+/*import styles from "../styles/Form.module.css";*/
 import styles from "../styles/Home.module.css";
 
 export default function NoteForm({ setShowNotes }) {
@@ -27,17 +29,30 @@ export default function NoteForm({ setShowNotes }) {
     setShowNotes(false);
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">Title:</label>
+    <form onSubmit={handleSubmit} className={styles.noteForm}>
+      <TiDelete
+        className={styles.deleteButton}
+        onClick={() => setShowNotes(false)}
+      />
+
+      <div class="title" className={styles.formHeader}>
+        Create a sticky!
+      </div>
+      <label htmlFor="title" className={styles.inputLabel}>
+        Title:
+      </label>
       <input type="text" id="title" name="title" placeholder="Name your note" />
 
-      <label htmlFor="description">Message:</label>
+      <label htmlFor="description" className={styles.inputLabel}>
+        Message:
+      </label>
       <textarea
         id="description"
         name="description"
         cols="30"
         rows="10"
         placeholder="Write your note here"
+        className={styles.inputDecription}
       ></textarea>
       <label for="yellowRadioButton" className={styles.selectColorButton}>
         Yellow
@@ -46,7 +61,7 @@ export default function NoteForm({ setShowNotes }) {
         type="radio"
         id="yellowRadioButton"
         name="color"
-        value="yellow"
+        value="#FFD100"
         checked
       />
 
@@ -54,7 +69,11 @@ export default function NoteForm({ setShowNotes }) {
         Pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <button>Add</button>
+      <label for="blueRadioButton" className={styles.selectColorButton}>
+        Blue
+      </label>
+      <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
+      <button className={styles.addButton}>Add</button>
     </form>
   );
 }

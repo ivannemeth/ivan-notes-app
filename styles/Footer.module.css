@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 10px 25px 10px 10px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+}

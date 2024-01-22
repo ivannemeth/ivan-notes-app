@@ -1,3 +1,5 @@
+import { TiDelete } from "react-icons/ti";
+
 export default function DeleteButton({ id, mutate }) {
   /*console.log("id", id);*/
 
@@ -12,7 +14,7 @@ export default function DeleteButton({ id, mutate }) {
 
         if (response.ok) {
           mutate();
-          setTimeout(() => {
+          /*setTimeout(() => {
             alert("Note deleted successfully.");
           }, 500);
           //router.replace("/");*/
@@ -26,5 +28,7 @@ export default function DeleteButton({ id, mutate }) {
     }
   }
 
-  return <button onClick={() => handleDelete()}>Delete</button>;
+  return <TiDelete onClick={() => handleDelete()} size="18px" />;
+
+  /*button onClick={() => handleDelete()}>Delete</TiDelete>;*/
 }

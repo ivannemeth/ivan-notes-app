@@ -7,12 +7,12 @@ import styles from "../styles/Home.module.css";
 function IsFavouriteButton() {
   const [isFavourite, setIsFavourite] = useState(false);
 
-  const handleClick = () => {
+  const toggleFavourite = () => {
     setIsFavourite(!isFavourite);
   };
 
   return (
-    <button onClick={handleClick} className={styles.IsFavouriteButton}>
+    <button onClick={toggleFavourite} className={styles.isFavouriteButton}>
       {isFavourite ? <FaStar /> : <FaRegStar />}
     </button>
   );
