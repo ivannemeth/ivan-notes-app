@@ -3,7 +3,7 @@ import Link from "next/link";
 import DeleteButton from "./DeleteButton";
 import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
-import IsFavouriteButton from "./IsFavouriteButton";
+
 import styles from "../styles/Home.module.css";
 
 export default function NotesList({

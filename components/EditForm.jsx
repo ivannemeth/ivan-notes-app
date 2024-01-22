@@ -1,6 +1,8 @@
 import useSWR from "swr";
 import styles from "../styles/Home.module.css";
 import { CgLaptop } from "react-icons/cg";
+import { TiDelete } from "react-icons/ti";
+import { useEffect } from "react";
 
 export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
   /* const router = useRouter();
@@ -37,9 +39,11 @@ console.log("id", id);*/
 
   return (
     <form onSubmit={handleEdit} className={styles.noteForm}>
-      <div class="title" className={styles.formHeader}>
-        Edit your sticky!
-      </div>
+      <TiDelete
+        className={styles.deleteButton}
+        onClick={() => setShowEditNotes(false)}
+      />
+      <div className={styles.formHeader}>Edit your sticky!</div>
       <label htmlFor="title" className={styles.inputLabel}>
         Title:
       </label>

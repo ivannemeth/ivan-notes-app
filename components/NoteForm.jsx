@@ -28,6 +28,7 @@ export default function NoteForm({ setShowNotes }) {
     mutate();
     setShowNotes(false);
   }
+
   return (
     <form onSubmit={handleSubmit} className={styles.noteForm}>
       <TiDelete
@@ -35,9 +36,7 @@ export default function NoteForm({ setShowNotes }) {
         onClick={() => setShowNotes(false)}
       />
 
-      <div class="title" className={styles.formHeader}>
-        Create a sticky!
-      </div>
+      <div className={styles.formHeader}>Create a sticky!</div>
       <label htmlFor="title" className={styles.inputLabel}>
         Title:
       </label>
@@ -54,7 +53,7 @@ export default function NoteForm({ setShowNotes }) {
         placeholder="Write your note here"
         className={styles.inputDecription}
       ></textarea>
-      <label for="yellowRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>
         Yellow
       </label>
       <input
@@ -62,14 +61,14 @@ export default function NoteForm({ setShowNotes }) {
         id="yellowRadioButton"
         name="color"
         value="#FFD100"
-        checked
+        defaultChecked
       />
 
-      <label for="pinkRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="pinkRadioButton" className={styles.selectColorButton}>
         Pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <label for="blueRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="blueRadioButton" className={styles.selectColorButton}>
         Blue
       </label>
       <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
