@@ -77,12 +77,11 @@ Option 2: There are sticky notes icons in 2/3 different colors on the homepage t
 Tasks
 …
 
-Bonus: User Story 6 : Sign-up/Log-in
+Bonus: User Story 6 : Filter notes by its color
 
 Value Proposition
 As a person that likes order
-I want to be able to log-in
-so that I can get back to my notes
+I want to be able to filter my notes according to its color
 
 Acceptance Criteria
 
