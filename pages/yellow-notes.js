@@ -6,12 +6,24 @@ import styles from "../styles/Home.module.css";
 import FilteredNotes from "@/components/FilteredNotes";
 import Link from "next/link";
 import { useState } from "react";
+import NoteForm from "@/components/NoteForm";
+import EditForm from "@/components/EditForm";
 
-export default function yellowNotesPage() {
+export default function YellowNotesPage() {
+  const [showEditNotes, setShowEditNotes] = useState(false);
+  const [noteToEdit, setNoteToEdit] = useState(null);
   return (
     <>
       <Navigation />
-      <FilteredNotes color="#FFD100" />
+      <FilteredNotes
+        color="#FFD100"
+        setShowEditNotes={setShowEditNotes}
+        setNoteToEdit={setNoteToEdit}
+      />
+
+      {showEditNotes && (
+        <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
+      )}
 
       <Footer />
     </>

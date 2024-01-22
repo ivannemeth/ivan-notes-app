@@ -7,7 +7,11 @@ import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
 import { useState } from "react";
 
-export default function FilteredNotes({ color }) {
+export default function FilteredNotes({
+  color,
+  setShowEditNotes,
+  setNoteToEdit,
+}) {
   const { data, isLoading, mutate } = useSWR("/api/notes");
 
   /*const colors = ["#FFD100", "#f695c5", "#1985A1"];*/
