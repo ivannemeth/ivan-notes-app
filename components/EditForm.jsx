@@ -54,6 +54,25 @@ console.log("id", id);*/
         placeholder="Write your note here"
         defaultValue={data?.description}
       ></textarea>
+      <label for="yellowRadioButton" className={styles.selectColorButton}>
+        Yellow
+      </label>
+      <input
+        type="radio"
+        id="yellowRadioButton"
+        name="color"
+        value="#FFD100"
+        checked
+      />
+
+      <label for="pinkRadioButton" className={styles.selectColorButton}>
+        Pink
+      </label>
+      <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
+      <label for="blueRadioButton" className={styles.selectColorButton}>
+        Blue
+      </label>
+      <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
       <button className={styles.addButton}>Save</button>
     </form>
   );
