@@ -50,7 +50,7 @@ export default function NoteForm({ setShowNotes }) {
         id="description"
         name="description"
         cols="30"
-        rows="10"
+        rows="7"
         placeholder="Write your note here"
         className={styles.inputDecription}
       ></textarea>

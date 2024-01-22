@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import styles from "../styles/Home.module.css";
+import { CgLaptop } from "react-icons/cg";
 
 export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
   /* const router = useRouter();
@@ -12,7 +13,7 @@ console.log("id", id);*/
   if (!data) {
     return;
   }
-  /*console.log("data", data);*/
+  //console.log("data", data);
 
   async function handleEdit(event) {
     event.preventDefault();
@@ -54,25 +55,7 @@ console.log("id", id);*/
         placeholder="Write your note here"
         defaultValue={data?.description}
       ></textarea>
-      <label for="yellowRadioButton" className={styles.selectColorButton}>
-        Yellow
-      </label>
-      <input
-        type="radio"
-        id="yellowRadioButton"
-        name="color"
-        value="#FFD100"
-        checked
-      />
 
-      <label for="pinkRadioButton" className={styles.selectColorButton}>
-        Pink
-      </label>
-      <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <label for="blueRadioButton" className={styles.selectColorButton}>
-        Blue
-      </label>
-      <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
       <button className={styles.addButton}>Save</button>
     </form>
   );
