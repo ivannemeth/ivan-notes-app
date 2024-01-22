@@ -11,8 +11,11 @@ export default function FilteredNotes({
   color,
   setShowEditNotes,
   setNoteToEdit,
+  data,
+  isLoading,
+  mutate,
 }) {
-  const { data, isLoading, mutate } = useSWR("/api/notes");
+  //const { data, isLoading, mutate } = useSWR("/api/notes");
 
   /*const colors = ["#FFD100", "#f695c5", "#1985A1"];*/
 

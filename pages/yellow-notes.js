@@ -8,21 +8,35 @@ import Link from "next/link";
 import { useState } from "react";
 import NoteForm from "@/components/NoteForm";
 import EditForm from "@/components/EditForm";
+import useSWR from "swr";
 
-export default function YellowNotesPage() {
-  const [showEditNotes, setShowEditNotes] = useState(false);
-  const [noteToEdit, setNoteToEdit] = useState(null);
+export default function YellowNotesPage({
+  showEditNotes,
+  setShowEditNotes,
+  noteToEdit,
+  setNoteToEdit,
+}) {
+  const { data, isLoading, mutate } = useSWR("/api/notes");
+  /*const [showEditNotes, setShowEditNotes] = useState(false);
+  const [noteToEdit, setNoteToEdit] = useState(null);*/
   return (
     <>
       <Navigation />
       <FilteredNotes
+        isLoading={isLoading}
+        mutate={mutate}
+        data={data}
         color="#FFD100"
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
       />
 
       {showEditNotes && (
-        <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
+        <EditForm
+          setShowEditNotes={setShowEditNotes}
+          noteToEdit={noteToEdit}
+          mutate={mutate}
+        />
       )}
 
       <Footer />
