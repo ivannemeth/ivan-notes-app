@@ -33,7 +33,7 @@ export default function YellowNotesPage({
         <EditForm
           setShowEditNotes={setShowEditNotes}
           noteToEdit={noteToEdit}
-          mutate={mutate}
+          mutateNotes={mutate}
         />
       )}
 

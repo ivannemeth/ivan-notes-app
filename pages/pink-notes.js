@@ -33,7 +33,7 @@ export default function PinkNotesPage({
         <EditForm
           setShowEditNotes={setShowEditNotes}
           noteToEdit={noteToEdit}
-          mutate={mutate}
+          mutateNotes={mutate}
         />
       )}
 

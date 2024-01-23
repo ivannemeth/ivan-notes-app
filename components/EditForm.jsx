@@ -4,11 +4,15 @@ import { CgLaptop } from "react-icons/cg";
 import { TiDelete } from "react-icons/ti";
 import { useEffect } from "react";
 
-export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
+export default function EditForm({
+  setShowEditNotes,
+  noteToEdit,
+  mutateNotes,
+}) {
   /* const router = useRouter();
   const { id } = router.query;
 console.log("id", id);*/
-  const { data, isLoading } = useSWR(`/api/notes/${noteToEdit}`);
+  const { data, isLoading, mutate } = useSWR(`/api/notes/${noteToEdit}`);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -31,7 +35,8 @@ console.log("id", id);*/
     });
 
     if (response.ok) {
-      mutate();
+      mutate({ ...data, ...noteData });
+      mutateNotes();
       setShowEditNotes(false);
 
       /*router.push("/") */

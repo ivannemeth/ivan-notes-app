@@ -43,7 +43,7 @@ export default function Home({
         <EditForm
           setShowEditNotes={setShowEditNotes}
           noteToEdit={noteToEdit}
-          mutate={mutate}
+          mutateNotes={mutate}
         />
       )}
       <Footer />
