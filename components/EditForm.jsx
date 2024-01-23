@@ -33,6 +33,7 @@ console.log("id", id);*/
     if (response.ok) {
       mutate();
       setShowEditNotes(false);
+
       /*router.push("/") */
     }
   }
