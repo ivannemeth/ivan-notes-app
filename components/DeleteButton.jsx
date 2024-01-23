@@ -1,4 +1,5 @@
 import { TiDelete } from "react-icons/ti";
+import styles from "../styles/Home.module.css";
 
 export default function DeleteButton({ id, mutate }) {
   /*console.log("id", id);*/
@@ -28,7 +29,14 @@ export default function DeleteButton({ id, mutate }) {
     }
   }
 
-  return <TiDelete onClick={() => handleDelete()} size="18px" />;
+  return (
+    <TiDelete
+      onClick={() => handleDelete()}
+      size="18px"
+      color="black"
+      className={styles.deleteButton}
+    />
+  );
 
   /*button onClick={() => handleDelete()}>Delete</TiDelete>;*/
 }

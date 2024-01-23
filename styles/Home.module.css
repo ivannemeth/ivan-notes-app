@@ -20,9 +20,20 @@
   text-shadow: 0px 2px 5px grey;
 }
 
+.h1Title:hover {
+  transform: scale(1.1);
+}
+
 .navbarAddlink {
   text-decoration: none;
   cursor: pointer;
+}
+
+.addNoteIcon {
+  color: white;
+}
+.addNoteIcon:hover {
+  transform: scale(1.1);
 }
 
 /* NOTE/NOTESLIST */
@@ -59,8 +70,20 @@
   justify-content: flex-end;
   gap: 3px;
 }
+
 .noteTitle {
   padding-top: 8px;
+}
+
+.editButton {
+  color: black;
+}
+.editButton:hover {
+  transform: scale(1.1);
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);
 }
 
 .isFavouriteButton {

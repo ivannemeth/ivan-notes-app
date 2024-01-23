@@ -9,8 +9,8 @@ export default function Navigation({ setShowNotes }) {
         <h1 className={styles.h1Title}>StickyMe*</h1>
       </Link>
       <IoIosAddCircle
+        className={styles.addNoteIcon}
         size="30px"
-        color="white"
         onClick={() => setShowNotes((toggle) => !toggle)}
       />
     </nav>

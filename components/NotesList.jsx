@@ -38,7 +38,7 @@ export default function NotesList({
             <div className={styles.noteButtons}>
               <MdEdit
                 size="18px"
-                color="black"
+                className={styles.editButton}
                 onClick={() => {
                   setNoteToEdit(note._id);
                   setShowEditNotes((toggle) => !toggle);
