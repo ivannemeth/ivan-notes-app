@@ -28,11 +28,13 @@ export default function Footer() {
           className={styles.linkNewPageIcon}
         />
       </Link>
-      <GiPlainCircle
-        size="25px"
-        color="#1985A1"
-        className={styles.linkNewPageIcon}
-      />
+      <Link href="/blue-notes">
+        <GiPlainCircle
+          size="25px"
+          color="#1985A1"
+          className={styles.linkNewPageIcon}
+        />
+      </Link>
     </footer>
   );
 }
