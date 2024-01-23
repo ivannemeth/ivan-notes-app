@@ -76,6 +76,12 @@
   padding-bottom: 6px;
 }
 
+.noteTitleStrike {
+  padding-top: 12px;
+  padding-bottom: 6px;
+  text-decoration: line-through;
+}
+
 .editButton {
   color: black;
 }

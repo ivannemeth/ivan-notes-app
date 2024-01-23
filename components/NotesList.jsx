@@ -3,6 +3,7 @@ import Link from "next/link";
 import DeleteButton from "./DeleteButton";
 import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
+import IsDoneButton from "./IsDoneButton";
 
 import styles from "../styles/Home.module.css";
 
@@ -45,7 +46,11 @@ export default function NotesList({
                 }}
               />
 
-              <ImCheckmark size="18px" />
+              <IsDoneButton
+                id={note._id}
+                mutate={mutate}
+                isDone={note.isDone}
+              />
               <DeleteButton id={note._id} mutate={mutate} />
             </div>
           </div>
@@ -56,3 +61,5 @@ export default function NotesList({
 }
 
 /*<Link href={`/${note._id}`}>*/
+
+/*<p style={{ textDecoration: "line-through" }} ></p>*/
