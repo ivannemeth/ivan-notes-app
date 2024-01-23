@@ -11,7 +11,11 @@ export default function FooterYellow() {
       </Link>
 
       <Link href="/pink-notes">
-        <GiPlainCircle size="25px" color="#f695c5" />
+        <GiPlainCircle
+          size="25px"
+          color="#f695c5"
+          className={styles.linkNewPageIcon}
+        />
       </Link>
       <GiPlainCircle size="25px" color="#1985A1" />
     </footer>

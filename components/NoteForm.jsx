@@ -40,7 +40,13 @@ export default function NoteForm({ setShowNotes }) {
       <label htmlFor="title" className={styles.inputLabel}>
         Title:
       </label>
-      <input type="text" id="title" name="title" placeholder="Name your note" />
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Name your note"
+        maxlength="30"
+      />
 
       <label htmlFor="description" className={styles.inputLabel}>
         Message:
@@ -48,9 +54,10 @@ export default function NoteForm({ setShowNotes }) {
       <textarea
         id="description"
         name="description"
-        cols="30"
-        rows="7"
-        placeholder="Write your note here"
+        cols="15"
+        rows="8"
+        placeholder="Write more text here"
+        maxlength="170"
         className={styles.inputDecription}
       ></textarea>
       <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>
@@ -72,7 +79,7 @@ export default function NoteForm({ setShowNotes }) {
         Blue
       </label>
       <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
-      <button className={styles.addButton}>Add</button>
+      <button className={styles.submitButton}>Add</button>
     </form>
   );
 }

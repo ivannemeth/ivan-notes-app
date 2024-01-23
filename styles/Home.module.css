@@ -72,7 +72,8 @@
 }
 
 .noteTitle {
-  padding-top: 8px;
+  padding-top: 12px;
+  padding-bottom: 6px;
 }
 
 .editButton {
@@ -144,7 +145,7 @@
   align-self: center;
 }
 
-.addButton {
+.submitButton {
   cursor: pointer;
   text-align: center;
   width: 50%;
@@ -153,7 +154,12 @@
   padding: 5px;
   align-self: center;
 }
-.addButton:active {
+
+.submitButton:hover {
+  transform: scale(1.1);
+}
+
+.submitButton:active {
   background-color: #f695c5;
 }
 /*FOOTER*/

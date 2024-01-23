@@ -8,15 +8,31 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Link href="/">
-        <CgArrowLeftO size="25px" color="white" />
+        <CgArrowLeftO
+          size="25px"
+          color="white"
+          className={styles.linkNewPageIcon}
+        />
       </Link>
       <Link href="/yellow-notes">
-        <GiPlainCircle size="25px" color="#FFD100" />
+        <GiPlainCircle
+          size="25px"
+          color="#FFD100"
+          className={styles.linkNewPageIcon}
+        />
       </Link>
       <Link href="/pink-notes">
-        <GiPlainCircle size="25px" color="#f695c5" />
+        <GiPlainCircle
+          size="25px"
+          color="#f695c5"
+          className={styles.linkNewPageIcon}
+        />
       </Link>
-      <GiPlainCircle size="25px" color="#1985A1" />
+      <GiPlainCircle
+        size="25px"
+        color="#1985A1"
+        className={styles.linkNewPageIcon}
+      />
     </footer>
   );
 }

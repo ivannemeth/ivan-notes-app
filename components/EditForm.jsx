@@ -58,6 +58,7 @@ console.log("id", id);*/
         Message:
       </label>
       <textarea
+        className={styles.inputDecription}
         id="description"
         name="description"
         cols="30"
@@ -66,7 +67,7 @@ console.log("id", id);*/
         defaultValue={data?.description}
       ></textarea>
 
-      <button className={styles.addButton}>Save</button>
+      <button className={styles.submitButton}>Save</button>
     </form>
   );
 }
