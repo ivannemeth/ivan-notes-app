@@ -59,7 +59,7 @@ export default function NoteForm({ setShowNotes }) {
         cols="15"
         rows="8"
         placeholder="write more here if you need to..."
-        maxLength="170"
+        maxLength="240"
         className={styles.inputDecription}
       ></textarea>
       <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>

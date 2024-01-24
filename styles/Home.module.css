@@ -70,6 +70,7 @@
   position: relative;
   word-wrap: break-word;
   font-size: 1rem;
+  /*box-shadow: 5px 5px 2px #1b1212;*/
 }
 /* Buttons on the note */
 .noteButtons {
@@ -180,9 +181,9 @@
 }
 .inputDecription {
   width: 250px;
-  height: 250px;
+  height: 200px;
   font-family: sans-serif;
-  padding: 5px;
+  padding: 20px 10px 10px;
   font-size: 1rem;
   align-self: center;
   border-radius: 10px;
