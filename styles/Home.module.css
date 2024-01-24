@@ -48,6 +48,17 @@
   padding-top: 75px;
 }
 
+.noteListContainerOpacity {
+  opacity: 0.25;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 18px;
+  padding: 10px;
+  /*position: relative;*/
+  background-color: black;
+  padding-top: 75px;
+}
+
 .note {
   /*background-color: #f695c5;*/
 
@@ -76,6 +87,7 @@
 .noteTitle {
   padding-top: 12px;
   padding-bottom: 6px;
+  font-family: sans-serif;
 }
 
 .isDone {
@@ -128,6 +140,7 @@
   /*align-items: center;*/
   flex-direction: column;
   width: 400px;
+  box-shadow: 15px 15px 10px black;
 }
 
 .deleteButton {
@@ -145,35 +158,52 @@
   color: #eee;
   align-self: center;
   font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .inputLabel {
   color: #eee;
   padding-bottom: 5px;
   padding-top: 10px;
-  font-family: sans-serif;
+
   align-self: center;
+  font-size: 0.7rem;
+}
+
+.inputTitle {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 5px;
+  width: 250px;
+  align-self: center;
+  font-family: sans-serif;
 }
 .inputDecription {
   width: 250px;
   height: 250px;
   font-family: sans-serif;
-  padding: 10px;
+  padding: 5px;
   font-size: 1rem;
   align-self: center;
+  border-radius: 10px;
 }
+/*.inputDecription:focus {
+  border: 2px solid red;
+}*/
 
 .selectColorButton {
   color: white;
   align-self: center;
+  font-size: 0.7rem;
+  padding-top: 8px;
 }
 
 .submitButton {
   cursor: pointer;
   text-align: center;
   width: 50%;
-  margin-top: 38px;
-  border-radius: 12px;
+  margin-top: 18px;
+  border-radius: 16px;
   padding: 5px;
   align-self: center;
 }

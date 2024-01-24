@@ -27,6 +27,7 @@ export default function BlueNotesPage({
         color="#1985A1"
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
+        showNotes={showNotes}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (

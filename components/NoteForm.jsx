@@ -36,32 +36,34 @@ export default function NoteForm({ setShowNotes }) {
         onClick={() => setShowNotes(false)}
       />
 
-      <div className={styles.formHeader}>Create a sticky!</div>
+      <div className={styles.formHeader}>create a sticky*</div>
       <label htmlFor="title" className={styles.inputLabel}>
-        Title:
+        title:
       </label>
       <input
+        className={styles.inputTitle}
         type="text"
         id="title"
         name="title"
-        placeholder="Name your note"
+        placeholder="write down just a quick note... "
         maxLength="30"
+        required
       />
 
       <label htmlFor="description" className={styles.inputLabel}>
-        Message:
+        description:
       </label>
       <textarea
         id="description"
         name="description"
         cols="15"
         rows="8"
-        placeholder="Write more text here"
+        placeholder="write more here if you need to..."
         maxLength="170"
         className={styles.inputDecription}
       ></textarea>
       <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>
-        Yellow
+        yellow
       </label>
       <input
         type="radio"
@@ -72,11 +74,11 @@ export default function NoteForm({ setShowNotes }) {
       />
 
       <label htmlFor="pinkRadioButton" className={styles.selectColorButton}>
-        Pink
+        pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
       <label htmlFor="blueRadioButton" className={styles.selectColorButton}>
-        Blue
+        blue
       </label>
       <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
       <button className={styles.submitButton}>Add</button>

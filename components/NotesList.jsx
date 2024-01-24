@@ -12,6 +12,7 @@ export default function NotesList({
   setNoteToEdit,
   data,
   mutate,
+  showNotes,
 }) {
   //  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
@@ -24,7 +25,11 @@ export default function NotesList({
 
   return (
     <>
-      <div className={styles.noteListContainer}>
+      <div
+        className={
+          showNotes ? styles.noteListContainerOpacity : styles.noteListContainer
+        }
+      >
         {data.map((note) => (
           <div
             key={note._id}

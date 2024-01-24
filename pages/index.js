@@ -37,6 +37,7 @@ export default function Home({
         setNoteToEdit={setNoteToEdit}
         data={data}
         mutate={mutate}
+        showNotes={showNotes}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (

@@ -27,6 +27,7 @@ export default function PinkNotesPage({
         color="#f695c5"
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
+        showNotes={showNotes}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
