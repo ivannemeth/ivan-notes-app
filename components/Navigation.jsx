@@ -6,7 +6,7 @@ export default function Navigation({ setShowNotes }) {
   return (
     <nav className={styles.navbar}>
       <Link href="/">
-        <h1 className={styles.h1Title}>StickyMe*</h1>
+        <h1 className={styles.h1Title}>StickMe*</h1>
       </Link>
       <IoIosAddCircle
         className={styles.addNoteIcon}

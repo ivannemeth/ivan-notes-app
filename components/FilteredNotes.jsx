@@ -47,9 +47,8 @@ export default function FilteredNotes({
 
             <div className={styles.noteButtons}>
               <MdEdit
-                size="18px"
                 className={
-                  note.isDone ? styles.isDoneButton : styles.editButton
+                  note.isDone ? styles.editButtonNoShow : styles.editButton
                 }
                 onClick={() => {
                   setNoteToEdit(note._id);

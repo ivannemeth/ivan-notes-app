@@ -33,7 +33,7 @@
   color: white;
 }
 .addNoteIcon:hover {
-  transform: scale(1.1);
+  transform: scale(1.2, 1.2);
 }
 
 /* NOTE/NOTESLIST */
@@ -71,6 +71,8 @@
   gap: 3px;
 }
 
+/* body of the note */
+
 .noteTitle {
   padding-top: 12px;
   padding-bottom: 6px;
@@ -80,27 +82,36 @@
   text-decoration: line-through;
 }
 
+/* buttons */
+
 .editButton {
   color: black;
 }
 
-.isDoneButton {
+.editButton:hover {
+  transform: scale(1.2, 1.2);
+  color: white;
+}
+
+.editButtonNoShow {
   display: none;
 }
-.editButton:hover {
-  transform: scale(1.1);
+
+.deleteButtonNote {
+  color: black;
+}
+.deleteButtonNote:hover {
+  color: red;
+  transform: scale(1.2, 1.2);
 }
 
-.deleteButton:hover {
-  transform: scale(1.1);
+.deleteButtonNote:hover {
+  transform: scale(1.2, 1.2);
 }
 
-.isFavouriteButton {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  size: "20px";
+.isDoneButton:hover {
+  color: white;
+  transform: scale(1.2, 1.2);
 }
 
 /*NOTE FORM*/
@@ -123,6 +134,9 @@
   align-self: flex-end;
   size: 18px;
   color: white;
+}
+.deleteButton:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .formHeader {

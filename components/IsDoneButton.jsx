@@ -20,5 +20,5 @@ export default function IsDoneButton({ id, mutate, isDone }) {
     /*isDone ? styles.noteTitleStrike : styles.noteTitle;*/
   }
 
-  return <ImCheckmark onClick={handleIsDone} />;
+  return <ImCheckmark onClick={handleIsDone} className={styles.isDoneButton} />;
 }
