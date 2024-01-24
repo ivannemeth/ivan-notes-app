@@ -9,3 +9,7 @@
   right: 0;
   border-top-left-radius: 10px;
 }
+
+.linkNewPageIcon:hover {
+  transform: scale(1.1);
+}

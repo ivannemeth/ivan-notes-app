@@ -1,10 +1,9 @@
 import Link from "next/link";
-
 import { CgArrowLeftO } from "react-icons/cg";
 import { GiPlainCircle } from "react-icons/gi";
-import styles from "../styles/Footer.module.css";
+import styles from "../../styles/Footer.module.css";
 
-export default function Footer() {
+export default function FooterYellow() {
   return (
     <footer className={styles.footer}>
       <Link href="/">
@@ -14,13 +13,7 @@ export default function Footer() {
           className={styles.linkNewPageIcon}
         />
       </Link>
-      <Link href="/yellow-notes">
-        <GiPlainCircle
-          size="25px"
-          color="#FFD100"
-          className={styles.linkNewPageIcon}
-        />
-      </Link>
+
       <Link href="/pink-notes">
         <GiPlainCircle
           size="25px"

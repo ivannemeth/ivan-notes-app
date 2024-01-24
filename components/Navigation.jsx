@@ -5,11 +5,12 @@ import styles from "../styles/Home.module.css";
 export default function Navigation({ setShowNotes }) {
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.h1Title}>StickyMe*</h1>
-
+      <Link href="/">
+        <h1 className={styles.h1Title}>StickyMe*</h1>
+      </Link>
       <IoIosAddCircle
+        className={styles.addNoteIcon}
         size="30px"
-        color="white"
         onClick={() => setShowNotes((toggle) => !toggle)}
       />
     </nav>

@@ -1,10 +1,10 @@
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import styles from "../styles/Home.module.css";
+import { CgLaptop } from "react-icons/cg";
+import { TiDelete } from "react-icons/ti";
+import { useEffect } from "react";
 
-export default function EditForm({ setShowEditNotes, noteToEdit, mutate }) {
-  /* const router = useRouter();
-  const { id } = router.query;
-console.log("id", id);*/
+export default function EditForm({ setShowEditNotes, noteToEdit }) {
   const { data, isLoading } = useSWR(`/api/notes/${noteToEdit}`);
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -12,7 +12,7 @@ console.log("id", id);*/
   if (!data) {
     return;
   }
-  /*console.log("data", data);*/
+  //console.log("data", data);
 
   async function handleEdit(event) {
     event.preventDefault();
@@ -28,17 +28,20 @@ console.log("id", id);*/
     });
 
     if (response.ok) {
-      mutate();
+      mutate((key) => key == "/api/notes" || key == `/api/notes/${noteToEdit}`);
+      /*mutate({...data,...noteData});
+      /*mutateNotes();*/
       setShowEditNotes(false);
-      /*router.push("/") */
     }
   }
 
   return (
     <form onSubmit={handleEdit} className={styles.noteForm}>
-      <div class="title" className={styles.formHeader}>
-        Edit your sticky!
-      </div>
+      <TiDelete
+        className={styles.deleteButton}
+        onClick={() => setShowEditNotes(false)}
+      />
+      <div className={styles.formHeader}>Edit your sticky!</div>
       <label htmlFor="title" className={styles.inputLabel}>
         Title:
       </label>
@@ -47,6 +50,7 @@ console.log("id", id);*/
         Message:
       </label>
       <textarea
+        className={styles.inputDecription}
         id="description"
         name="description"
         cols="30"
@@ -54,7 +58,11 @@ console.log("id", id);*/
         placeholder="Write your note here"
         defaultValue={data?.description}
       ></textarea>
-      <button className={styles.addButton}>Save</button>
+
+      <button className={styles.submitButton}>Save</button>
     </form>
   );
 }
+
+/*undefined,
+        { revalidate: true }*/

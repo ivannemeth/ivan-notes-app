@@ -1,4 +1,4 @@
-import FooterYellow from "@/components/filtered/FooterYellow";
+import FooterBlue from "@/components/filtered/FooterBlue";
 import Navigation from "@/components/Navigation";
 import FilteredNotes from "@/components/FilteredNotes";
 import { useState } from "react";
@@ -6,7 +6,7 @@ import EditForm from "@/components/EditForm";
 import useSWR from "swr";
 import NoteForm from "@/components/NoteForm";
 
-export default function YellowNotesPage({
+export default function BlueNotesPage({
   showEditNotes,
   setShowEditNotes,
   noteToEdit,
@@ -24,7 +24,7 @@ export default function YellowNotesPage({
         isLoading={isLoading}
         mutate={mutate}
         data={data}
-        color="#FFD100"
+        color="#1985A1"
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
       />
@@ -33,7 +33,7 @@ export default function YellowNotesPage({
         <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
       )}
 
-      <FooterYellow />
+      <FooterBlue />
     </>
   );
 }

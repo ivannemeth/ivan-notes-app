@@ -20,9 +20,20 @@
   text-shadow: 0px 2px 5px grey;
 }
 
+.h1Title:hover {
+  transform: scale(1.1);
+}
+
 .navbarAddlink {
   text-decoration: none;
   cursor: pointer;
+}
+
+.addNoteIcon {
+  color: white;
+}
+.addNoteIcon:hover {
+  transform: scale(1.1);
 }
 
 /* NOTE/NOTESLIST */
@@ -59,8 +70,29 @@
   justify-content: flex-end;
   gap: 3px;
 }
+
 .noteTitle {
-  padding-top: 8px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+
+.isDone {
+  text-decoration: line-through;
+}
+
+.editButton {
+  color: black;
+}
+
+.isDoneButton {
+  display: none;
+}
+.editButton:hover {
+  transform: scale(1.1);
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);
 }
 
 .isFavouriteButton {
@@ -121,7 +153,7 @@
   align-self: center;
 }
 
-.addButton {
+.submitButton {
   cursor: pointer;
   text-align: center;
   width: 50%;
@@ -130,6 +162,12 @@
   padding: 5px;
   align-self: center;
 }
-.addButton:active {
+
+.submitButton:hover {
+  transform: scale(1.1);
+}
+
+.submitButton:active {
   background-color: #f695c5;
 }
+/*FOOTER*/

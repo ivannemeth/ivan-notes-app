@@ -6,12 +6,19 @@ import NoteForm from "@/components/NoteForm";
 import EditForm from "@/components/EditForm";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function Home({
+  showNotes,
+  setShowNotes,
+  showEditNotes,
+  setShowEditNotes,
+  noteToEdit,
+  setNoteToEdit,
+}) {
   const { data, isLoading, mutate } = useSWR("/api/notes");
 
-  const [showNotes, setShowNotes] = useState(false);
+  /*const [showNotes, setShowNotes] = useState(false);
   const [showEditNotes, setShowEditNotes] = useState(false);
-  const [noteToEdit, setNoteToEdit] = useState(null);
+  const [noteToEdit, setNoteToEdit] = useState(null);*/
 
   /* console.log("showEditNotes", showEditNotes);*/
 
@@ -33,13 +40,11 @@ export default function Home() {
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
-        <EditForm
-          setShowEditNotes={setShowEditNotes}
-          noteToEdit={noteToEdit}
-          mutate={mutate}
-        />
+        <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
       )}
       <Footer />
     </>
   );
 }
+
+/* mutateNotes={mutate}*/

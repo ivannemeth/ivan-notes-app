@@ -28,6 +28,7 @@ export default function NoteForm({ setShowNotes }) {
     mutate();
     setShowNotes(false);
   }
+
   return (
     <form onSubmit={handleSubmit} className={styles.noteForm}>
       <TiDelete
@@ -35,13 +36,17 @@ export default function NoteForm({ setShowNotes }) {
         onClick={() => setShowNotes(false)}
       />
 
-      <div class="title" className={styles.formHeader}>
-        Create a sticky!
-      </div>
+      <div className={styles.formHeader}>Create a sticky!</div>
       <label htmlFor="title" className={styles.inputLabel}>
         Title:
       </label>
-      <input type="text" id="title" name="title" placeholder="Name your note" />
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Name your note"
+        maxLength="30"
+      />
 
       <label htmlFor="description" className={styles.inputLabel}>
         Message:
@@ -49,12 +54,13 @@ export default function NoteForm({ setShowNotes }) {
       <textarea
         id="description"
         name="description"
-        cols="30"
-        rows="10"
-        placeholder="Write your note here"
+        cols="15"
+        rows="8"
+        placeholder="Write more text here"
+        maxLength="170"
         className={styles.inputDecription}
       ></textarea>
-      <label for="yellowRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>
         Yellow
       </label>
       <input
@@ -62,18 +68,18 @@ export default function NoteForm({ setShowNotes }) {
         id="yellowRadioButton"
         name="color"
         value="#FFD100"
-        checked
+        defaultChecked
       />
 
-      <label for="pinkRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="pinkRadioButton" className={styles.selectColorButton}>
         Pink
       </label>
       <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <label for="blueRadioButton" className={styles.selectColorButton}>
+      <label htmlFor="blueRadioButton" className={styles.selectColorButton}>
         Blue
       </label>
       <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
-      <button className={styles.addButton}>Add</button>
+      <button className={styles.submitButton}>Add</button>
     </form>
   );
 }

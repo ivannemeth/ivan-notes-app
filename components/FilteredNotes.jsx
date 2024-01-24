@@ -1,31 +1,40 @@
 import useSWR from "swr";
-import Link from "next/link";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+import styles from "../styles/Home.module.css";
 import DeleteButton from "./DeleteButton";
 import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
+import { useState } from "react";
 import IsDoneButton from "./IsDoneButton";
 
-import styles from "../styles/Home.module.css";
-
-export default function NotesList({
+export default function FilteredNotes({
+  color,
   setShowEditNotes,
   setNoteToEdit,
   data,
+  isLoading,
   mutate,
 }) {
-  //  const { data, isLoading, mutate } = useSWR("/api/notes");
-  /*console.log("data from client", data);*/
-  /*  if (isLoading) {
+  //const { data, isLoading, mutate } = useSWR("/api/notes");
+
+  /*const colors = ["#FFD100", "#f695c5", "#1985A1"];*/
+
+  if (isLoading) {
     return <h1>Loading...</h1>;
   }
   if (!data) {
     return;
-  }*/
+  }
+
+  const filteredNotes = data.filter((note) => {
+    return note.color === color;
+  });
 
   return (
     <>
       <div className={styles.noteListContainer}>
-        {data.map((note) => (
+        {filteredNotes.map((note) => (
           <div
             key={note._id}
             className={styles.note}
@@ -61,7 +70,3 @@ export default function NotesList({
     </>
   );
 }
-
-/*<Link href={`/${note._id}`}>*/
-
-/*<p style={{ textDecoration: "line-through" }} ></p>*/
