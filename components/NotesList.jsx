@@ -31,7 +31,7 @@ export default function NotesList({
             className={styles.note}
             style={{ backgroundColor: note.color }}
           >
-            <div>
+            <div className={note.isDone ? styles.isDone : ""}>
               <h3 className={styles.noteTitle}>{note.title}</h3>
               <p>{note.description}</p>
             </div>

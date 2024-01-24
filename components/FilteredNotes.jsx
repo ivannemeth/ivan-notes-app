@@ -6,6 +6,7 @@ import DeleteButton from "./DeleteButton";
 import { ImCheckmark } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
 import { useState } from "react";
+import IsDoneButton from "./IsDoneButton";
 
 export default function FilteredNotes({
   color,
@@ -39,7 +40,7 @@ export default function FilteredNotes({
             className={styles.note}
             style={{ backgroundColor: note.color }}
           >
-            <div>
+            <div className={note.isDone ? styles.isDone : ""}>
               <h3 className={styles.noteTitle}>{note.title}</h3>
               <p>{note.description}</p>
             </div>
@@ -54,7 +55,11 @@ export default function FilteredNotes({
                 }}
               />
 
-              <ImCheckmark size="18px" />
+              <IsDoneButton
+                id={note._id}
+                mutate={mutate}
+                isDone={note.isDone}
+              />
               <DeleteButton id={note._id} mutate={mutate} />
             </div>
           </div>

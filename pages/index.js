@@ -40,13 +40,11 @@ export default function Home({
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
-        <EditForm
-          setShowEditNotes={setShowEditNotes}
-          noteToEdit={noteToEdit}
-          mutateNotes={mutate}
-        />
+        <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
       )}
       <Footer />
     </>
   );
 }
+
+/* mutateNotes={mutate}*/

@@ -76,7 +76,7 @@
   padding-bottom: 6px;
 }
 
-.noteTitleStrike {
+.isDone {
   padding-top: 12px;
   padding-bottom: 6px;
   text-decoration: line-through;

@@ -1,18 +1,11 @@
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import styles from "../styles/Home.module.css";
 import { CgLaptop } from "react-icons/cg";
 import { TiDelete } from "react-icons/ti";
 import { useEffect } from "react";
 
-export default function EditForm({
-  setShowEditNotes,
-  noteToEdit,
-  mutateNotes,
-}) {
-  /* const router = useRouter();
-  const { id } = router.query;
-console.log("id", id);*/
-  const { data, isLoading, mutate } = useSWR(`/api/notes/${noteToEdit}`);
+export default function EditForm({ setShowEditNotes, noteToEdit }) {
+  const { data, isLoading } = useSWR(`/api/notes/${noteToEdit}`);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -35,11 +28,10 @@ console.log("id", id);*/
     });
 
     if (response.ok) {
-      mutate({ ...data, ...noteData });
-      mutateNotes();
+      mutate((key) => key == "/api/notes" || key == `/api/notes/${noteToEdit}`);
+      /*mutate({...data,...noteData});
+      /*mutateNotes();*/
       setShowEditNotes(false);
-
-      /*router.push("/") */
     }
   }
 
@@ -71,3 +63,6 @@ console.log("id", id);*/
     </form>
   );
 }
+
+/*undefined,
+        { revalidate: true }*/
