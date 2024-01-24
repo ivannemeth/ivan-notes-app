@@ -30,11 +30,7 @@ export default function BlueNotesPage({
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
-        <EditForm
-          setShowEditNotes={setShowEditNotes}
-          noteToEdit={noteToEdit}
-          mutateNotes={mutate}
-        />
+        <EditForm setShowEditNotes={setShowEditNotes} noteToEdit={noteToEdit} />
       )}
 
       <FooterBlue />

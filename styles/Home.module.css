@@ -77,13 +77,15 @@
 }
 
 .isDone {
-  padding-top: 12px;
-  padding-bottom: 6px;
   text-decoration: line-through;
 }
 
 .editButton {
   color: black;
+}
+
+.isDoneButton {
+  display: none;
 }
 .editButton:hover {
   transform: scale(1.1);
