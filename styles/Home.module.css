@@ -69,8 +69,13 @@
   height: 250px;
   position: relative;
   word-wrap: break-word;
-  font-size: 1rem;
+
+  border: none;
   /*box-shadow: 5px 5px 2px #1b1212;*/
+}
+
+.note:hover {
+  transform: scale(1.02, 1.02);
 }
 /* Buttons on the note */
 .noteButtons {
