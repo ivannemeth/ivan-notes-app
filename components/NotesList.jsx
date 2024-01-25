@@ -13,7 +13,6 @@ export default function NotesList({
   data,
   mutate,
   showNotes,
-  showEditNotes,
 }) {
   //  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
@@ -28,9 +27,7 @@ export default function NotesList({
     <>
       <div
         className={
-          showNotes || showEditNotes
-            ? styles.noteListContainerOpacity
-            : styles.noteListContainer
+          showNotes ? styles.noteListContainerOpacity : styles.noteListContainer
         }
       >
         {data.map((note) => (

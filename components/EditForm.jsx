@@ -46,26 +46,22 @@ export default function EditForm({ setShowEditNotes, noteToEdit }) {
         title:
       </label>
       <input
-        className={styles.inputTitle}
         type="text"
         id="title"
         name="title"
-        placeholder="edit here... "
-        maxLength="30"
-        required
+        defaultValue={data?.title}
+        className={styles.inputTitle}
       />
-
       <label htmlFor="description" className={styles.inputLabel}>
         description:
       </label>
       <textarea
+        className={styles.inputDescription}
         id="description"
         name="description"
         cols="15"
         rows="8"
-        placeholder="edit here..."
-        maxLength="240"
-        className={styles.inputDecription}
+        defaultValue={data?.description}
       ></textarea>
 
       <button className={styles.submitButton}>Save</button>
