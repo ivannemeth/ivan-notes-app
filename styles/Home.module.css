@@ -32,8 +32,12 @@
 .addNoteIcon {
   color: white;
 }
+
 .addNoteIcon:hover {
   transform: scale(1.2, 1.2);
+}
+.addNoteIcon:active {
+  color: #48bb2b;
 }
 
 /* NOTE/NOTESLIST */
