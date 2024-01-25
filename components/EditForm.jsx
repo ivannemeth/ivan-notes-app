@@ -41,22 +41,31 @@ export default function EditForm({ setShowEditNotes, noteToEdit }) {
         className={styles.deleteButton}
         onClick={() => setShowEditNotes(false)}
       />
-      <div className={styles.formHeader}>Edit your sticky!</div>
+      <div className={styles.formHeader}>edit your sticky*</div>
       <label htmlFor="title" className={styles.inputLabel}>
-        Title:
+        title:
       </label>
-      <input type="text" id="title" name="title" defaultValue={data?.title} />
+      <input
+        className={styles.inputTitle}
+        type="text"
+        id="title"
+        name="title"
+        placeholder="edit here... "
+        maxLength="30"
+        required
+      />
+
       <label htmlFor="description" className={styles.inputLabel}>
-        Message:
+        description:
       </label>
       <textarea
-        className={styles.inputDecription}
         id="description"
         name="description"
-        cols="30"
-        rows="10"
-        placeholder="Write your note here"
-        defaultValue={data?.description}
+        cols="15"
+        rows="8"
+        placeholder="edit here..."
+        maxLength="240"
+        className={styles.inputDecription}
       ></textarea>
 
       <button className={styles.submitButton}>Save</button>
