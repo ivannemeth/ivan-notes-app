@@ -51,6 +51,8 @@ export default function EditForm({ setShowEditNotes, noteToEdit }) {
         name="title"
         defaultValue={data?.title}
         className={styles.inputTitle}
+        maxLength="30"
+        required
       />
       <label htmlFor="description" className={styles.inputLabel}>
         description:
@@ -62,6 +64,7 @@ export default function EditForm({ setShowEditNotes, noteToEdit }) {
         cols="15"
         rows="8"
         defaultValue={data?.description}
+        maxLength="220"
       ></textarea>
 
       <button className={styles.submitButton}>Save</button>
