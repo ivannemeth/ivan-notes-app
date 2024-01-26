@@ -4,6 +4,8 @@ import useSWR from "swr";
 import NoteForm from "@/components/NoteForm";
 import EditForm from "@/components/EditForm";
 import Footer from "@/components/Footer";
+import PuffLoader from "react-spinners/PuffLoader";
+import styles from "../styles/Home.module.css";
 
 export default function Home({
   showNotes,
@@ -18,7 +20,11 @@ export default function Home({
   /* console.log("showEditNotes", showEditNotes);*/
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className={styles.loader}>
+        <PuffLoader color="#ffffff" />
+      </div>
+    );
   }
   if (!data) {
     return;
