@@ -111,6 +111,7 @@
 
 .editButton {
   color: black;
+  position: relative;
 }
 
 .editButton:hover {
@@ -145,6 +146,7 @@
 .isDoneButton:active {
   transform: scale(1, 1);
   color: black;
+  cursor: wait;
 }
 
 /*NOTE FORM*/
