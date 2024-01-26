@@ -16,6 +16,7 @@ export default function FilteredNotes({
   isLoading,
   mutate,
   showNotes,
+  showEditNotes,
 }) {
   //const { data, isLoading, mutate } = useSWR("/api/notes");
 
@@ -36,7 +37,9 @@ export default function FilteredNotes({
     <>
       <div
         className={
-          showNotes ? styles.noteListContainerOpacity : styles.noteListContainer
+          showNotes || showEditNotes
+            ? styles.noteListContainerOpacity
+            : styles.noteListContainer
         }
       >
         {filteredNotes.map((note) => (

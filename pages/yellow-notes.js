@@ -28,6 +28,7 @@ export default function YellowNotesPage({
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
         showNotes={showNotes}
+        showEditNotes={showEditNotes}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (
