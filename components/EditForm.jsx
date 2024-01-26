@@ -1,16 +1,14 @@
 import useSWR, { mutate } from "swr";
 import styles from "../styles/Home.module.css";
-import { CgLaptop } from "react-icons/cg";
 import { TiDelete } from "react-icons/ti";
-import { useEffect } from "react";
-import MoonLoader from "react-spinners/MoonLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 
 export default function EditForm({ setShowEditNotes, noteToEdit }) {
   const { data, isLoading } = useSWR(`/api/notes/${noteToEdit}`);
   if (isLoading) {
     return (
       <div className={styles.loader}>
-        <MoonLoader color="#ffffff" />
+        <PuffLoader color="#ffffff" />
       </div>
     );
   }
@@ -78,6 +76,3 @@ export default function EditForm({ setShowEditNotes, noteToEdit }) {
     </>
   );
 }
-
-/*undefined,
-        { revalidate: true }*/

@@ -1,6 +1,5 @@
 import useSWR from "swr";
 import { TiDelete } from "react-icons/ti";
-/*import styles from "../styles/Form.module.css";*/
 import styles from "../styles/Home.module.css";
 
 export default function NoteForm({ setShowNotes }) {

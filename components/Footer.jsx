@@ -7,13 +7,6 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Link href="/">
-        <CgArrowLeftO
-          size="25px"
-          color="white"
-          className={styles.linkNewPageIcon}
-        />
-      </Link>
       <Link href="/yellow-notes">
         <GiPlainCircle
           size="25px"
