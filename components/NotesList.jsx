@@ -12,6 +12,8 @@ export default function NotesList({
   setNoteToEdit,
   data,
   mutate,
+  showNotes,
+  showEditNotes,
 }) {
   //  const { data, isLoading, mutate } = useSWR("/api/notes");
   /*console.log("data from client", data);*/
@@ -21,10 +23,16 @@ export default function NotesList({
   if (!data) {
     return;
   }*/
-
+  /*console.log("showEditNotes", showEditNotes);*/
   return (
     <>
-      <div className={styles.noteListContainer}>
+      <div
+        className={
+          showNotes || showEditNotes
+            ? styles.noteListContainerOpacity
+            : styles.noteListContainer
+        }
+      >
         {data.map((note) => (
           <div
             key={note._id}
@@ -38,9 +46,8 @@ export default function NotesList({
 
             <div className={styles.noteButtons}>
               <MdEdit
-                size="18px"
                 className={
-                  note.isDone ? styles.isDoneButton : styles.editButton
+                  note.isDone ? styles.editButtonNoShow : styles.editButton
                 }
                 onClick={() => {
                   setNoteToEdit(note._id);
@@ -61,7 +68,3 @@ export default function NotesList({
     </>
   );
 }
-
-/*<Link href={`/${note._id}`}>*/
-
-/*<p style={{ textDecoration: "line-through" }} ></p>*/

@@ -27,6 +27,8 @@ export default function YellowNotesPage({
         color="#FFD100"
         setShowEditNotes={setShowEditNotes}
         setNoteToEdit={setNoteToEdit}
+        showNotes={showNotes}
+        showEditNotes={showEditNotes}
       />
       {showNotes && <NoteForm setShowNotes={setShowNotes} />}
       {showEditNotes && (

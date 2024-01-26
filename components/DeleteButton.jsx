@@ -32,9 +32,7 @@ export default function DeleteButton({ id, mutate }) {
   return (
     <TiDelete
       onClick={() => handleDelete()}
-      size="18px"
-      color="black"
-      className={styles.deleteButton}
+      className={styles.deleteButtonNote}
     />
   );
 

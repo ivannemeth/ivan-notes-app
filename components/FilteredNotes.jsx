@@ -15,6 +15,8 @@ export default function FilteredNotes({
   data,
   isLoading,
   mutate,
+  showNotes,
+  showEditNotes,
 }) {
   //const { data, isLoading, mutate } = useSWR("/api/notes");
 
@@ -33,7 +35,13 @@ export default function FilteredNotes({
 
   return (
     <>
-      <div className={styles.noteListContainer}>
+      <div
+        className={
+          showNotes || showEditNotes
+            ? styles.noteListContainerOpacity
+            : styles.noteListContainer
+        }
+      >
         {filteredNotes.map((note) => (
           <div
             key={note._id}
@@ -47,9 +55,8 @@ export default function FilteredNotes({
 
             <div className={styles.noteButtons}>
               <MdEdit
-                size="18px"
                 className={
-                  note.isDone ? styles.isDoneButton : styles.editButton
+                  note.isDone ? styles.editButtonNoShow : styles.editButton
                 }
                 onClick={() => {
                   setNoteToEdit(note._id);

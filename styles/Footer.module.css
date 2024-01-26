@@ -13,3 +13,8 @@
 .linkNewPageIcon:hover {
   transform: scale(1.1);
 }
+
+.linkNewPageIcon:active {
+  transform: scale(0.95);
+  cursor: wait;
+}
