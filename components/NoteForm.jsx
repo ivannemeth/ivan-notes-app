@@ -62,24 +62,33 @@ export default function NoteForm({ setShowNotes }) {
         className={styles.inputDescription}
       ></textarea>
       <label htmlFor="yellowRadioButton" className={styles.selectColorButton}>
-        yellow
+        color:
       </label>
+
       <input
         type="radio"
         id="yellowRadioButton"
         name="color"
         value="#FFD100"
+        className={styles.inputRadioYellow}
         defaultChecked
       />
 
-      <label htmlFor="pinkRadioButton" className={styles.selectColorButton}>
-        pink
-      </label>
-      <input type="radio" id="pinkRadioButton" name="color" value="#f695c5" />
-      <label htmlFor="blueRadioButton" className={styles.selectColorButton}>
-        blue
-      </label>
-      <input type="radio" id="blueRadioButton" name="color" value="#1985A1" />
+      <input
+        type="radio"
+        id="pinkRadioButton"
+        name="color"
+        value="#f695c5"
+        className={styles.inputRadioPink}
+      />
+
+      <input
+        type="radio"
+        id="blueRadioButton"
+        name="color"
+        value="#1985A1"
+        className={styles.inputRadioBlue}
+      />
       <button className={styles.submitButton}>Add</button>
     </form>
   );
